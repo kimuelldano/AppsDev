@@ -1,6 +1,6 @@
 USE Department
 
-CREATE TABLE Employee(
+[CREATE TABLE Employee(
 employee_id INT PRIMARY KEY,
 employee_name VARCHAR(100),
 );
@@ -23,3 +23,4 @@ INSERT INTO departments(department_id, department_name, manager_id)
 
 
 SELECT * FROM Employee
+](https://onecompiler.com/mysql/44dyum2ms)
