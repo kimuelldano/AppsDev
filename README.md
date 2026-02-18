@@ -1,26 +1,22 @@
-USE Department
-
-[CREATE TABLE Employee(
-employee_id INT PRIMARY KEY,
-employee_name VARCHAR(100),
+CREATE TABLE Employee (
+    employee_id INT AUTO_INCREMENT PRIMARY KEY,
+    employee_name VARCHAR(100) NOT NULL
 );
 
-CREATE TABLE Departments(
-department_id INT PRIMARY KEY,
-department_name VARCHAR(100),
-manager_id INT,
+CREATE TABLE Departments (
+    department_id INT AUTO_INCREMENT PRIMARY KEY,
+    department_name VARCHAR(100) NOT NULL,
+    manager_id INT,
+    FOREIGN KEY (manager_id) REFERENCES Employee(employee_id)
 );
 
-INSERT INTO employee(employee_id, employee_name)
-(1, 'John Doe'),
-(2, 'Jane Doe')
+INSERT INTO Employee (employee_name) VALUES
+('John Doe'),
+('Jane Doe');
 
+INSERT INTO Departments (department_name, manager_id) VALUES
+('IT', 1),
+('HR', 2);
 
-INSERT INTO departments(department_id, department_name, manager_id)
-(1, 'IT',),
-(2, 'HR',)
-
-
-
-SELECT * FROM Employee
-](https://onecompiler.com/mysql/44dyum2ms)
+SELECT * FROM Employee;
+SELECT * FROM Departments;
